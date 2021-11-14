@@ -1,0 +1,330 @@
+@charset "utf-8";
+
+nav {
+    z-index: 10000;
+    display: block;
+    position: fixed;
+    top: 4.5vw;
+    right: 6vw;
+    width: 50px;
+    height: 50px;
+}
+
+.menu-hamburger {
+    display: block;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 35px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.menu-hamburger input {
+    display: none;
+}
+
+.line {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #f4f4f4;
+    z-index: 1000;
+}
+
+@keyframes EndOne {
+    from {
+        top: 8px;
+        transform: rotate(0deg);
+    }
+    to {
+        top: 0px;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes EndThree {
+    from {
+        top: 8px;
+        transform: rotate(0deg);
+    }
+    to {
+        top: 16px;
+        transform: rotate(0deg);
+    }
+}
+.one {
+    top: 0;
+    animation: EndOne 1s 0s 1 ease forwards;
+}
+
+.two {
+    top: 8px;
+}
+.three {
+    top: 16px;
+    animation: EndThree 1s 0s 1 ease forwards;
+}
+
+@keyframes CrossOne {
+    from {
+        top: 8px;
+        transform: rotate(0deg);
+    }
+    to {
+        top: 8px;
+        transform: rotate(90deg);
+    }
+}
+@keyframes CrossThree {
+    from {
+        top: 8px;
+        transform: rotate(0deg);
+    }
+    to {
+        top: 8px;
+        transform: rotate(-90deg);
+    }
+}
+
+@keyframes RorateOne {
+    from {
+    }
+    to {
+        transform: rotate(135deg);
+    }
+}
+@keyframes RorateTwo {
+    to {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes RorateThree {
+    to {
+        transform: rotate(-45deg);
+    }
+}
+#hamburger:checked ~ .one {
+    animation: CrossOne 1s 0s 1 ease forwards, RorateOne 1s 1s 1 ease forwards;
+}
+
+#hamburger:checked ~ .three {
+    animation: CrossThree 1s 0s 1 ease forwards,
+        RorateThree 1s 1s 1 ease forwards;
+}
+#hamburger:checked ~ .two {
+    animation: RorateTwo 1s 1s 1 ease forwards;
+}
+
+.hamburger-name {
+    position: absolute;
+    top: 35px;
+    width: 100%;
+    text-align: center;
+}
+
+@keyframes fadeOutNav {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+#nav-menu {
+    display: none;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #333;
+    font-family: "Abel", sans-serif;
+    z-index: 999;
+    animation: fadeOutNav 1s 0s ease forwards;
+    pointer-events: none;
+    background-color: #161615;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+#hamburger:checked ~ #nav-menu {
+    display: block !important;
+    animation: fadeIn 1s 1s ease forwards;
+}
+#menu-container {
+    position: absolute;
+    padding: 10px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 320px;
+    text-align: center;
+}
+
+@keyframes menu-wave {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(15px);
+    }
+}
+
+#hamburger:checked ~ #nav-menu > #menu-container > #menu-title {
+    animation: menu-wave 0.3s 1s ease forwards;
+}
+
+#hamburger:checked
+    ~ #nav-menu
+    > #menu-container
+    > #menu-list
+    > li:nth-child(1) {
+    animation: menu-wave 0.3s 1.1s ease forwards;
+}
+#hamburger:checked
+    ~ #nav-menu
+    > #menu-container
+    > #menu-list
+    > li:nth-child(2) {
+    animation: menu-wave 0.3s 1.2s ease forwards;
+}
+#hamburger:checked
+    ~ #nav-menu
+    > #menu-container
+    > #menu-list
+    > li:nth-child(3) {
+    animation: menu-wave 0.3s 1.3s ease forwards;
+}
+#hamburger:checked
+    ~ #nav-menu
+    > #menu-container
+    > #menu-list
+    > li:nth-child(4) {
+    animation: menu-wave 0.3s 1.4s ease forwards;
+}
+#hamburger:checked ~ #nav-menu > #menu-container > #menu-footer {
+    animation: menu-wave 0.3s 1.5s ease forwards;
+}
+
+#menu-title {
+    font-size: 4rem;
+    margin-bottom: 45px;
+}
+#menu-list {
+    position: relative;
+    width: 100%;
+    font-size: 1.8rem;
+    letter-spacing: 0.1em;
+}
+#menu-list li {
+    position: relative;
+    height: 24px;
+    margin-bottom: 32px;
+}
+
+#menu-list li::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(100, 100, 100, 0.5);
+}
+
+#menu-list li a {
+    height: 20px;
+    position: relative;
+    display: block;
+    pointer-events: auto;
+}
+
+#menu-list > li > a::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    opacity: 0;
+    z-index: 2;
+}
+
+#menu-list li a:hover:before {
+    background-color: #7d5f12 !important;
+    height: 3px;
+    animation: fadeIn 0.2s 0s ease-out forwards;
+}
+
+.menu-en {
+    position: absolute;
+    left: 0;
+    letter-spacing: 1.28px;
+    background-color: #161615;
+}
+.menu-ja {
+    position: absolute;
+    right: 0;
+    letter-spacing: 1.28px;
+    background-color: #161615;
+    opacity: 0.8;
+}
+#menu-footer {
+    font-size: 1rem;
+}
+
+.waves {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -7px; /*Fix for safari gap*/
+    min-height: 100px;
+    max-height: 150px;
+}
+
+/* BottomsWaveAnimation */
+.bottomsWave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.parallax > use {
+    animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}

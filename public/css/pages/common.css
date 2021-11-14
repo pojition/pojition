@@ -1,0 +1,34 @@
+/* 共通部分はできるだけこのcssに記載しまとめる */
+
+html {
+    /* 1rem=10pxとする */
+    font-size: 10px;
+    font-family: "メイリオ", "Meiryo", sans-serif;
+}
+
+body {
+    background-color: #2c2c2c;
+    color: #f4f4f4;
+}
+ul,
+li {
+    list-style: none;
+    padding-left: 0;
+}
+li::marker {
+    list-style-position: outside !important;
+    list-style-type: none;
+}
+
+a {
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
