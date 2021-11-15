@@ -4,6 +4,8 @@ html {
     /* 1rem=10pxとする */
     font-size: 10px;
     font-family: "メイリオ", "Meiryo", sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -32,3 +34,34 @@ img {
     height: 100%;
     object-fit: cover;
 }
+
+/* コンテンツ間の幅確保用 */
+.mg-top {
+    margin-top: 20px;
+}
+.mg-bottom {
+    margin-bottom: 20px;
+}
+
+.pd-top10 {
+    padding-top: 10px;
+}
+.pd-left10 {
+    padding-left: 10px;
+}
+.pd-right10 {
+    padding-right: 10px;
+}
+.pd-bottom10 {
+    padding-bottom: 10px;
+}
+.pd-10 {
+    padding: 10px;
+}
+/*ここまで コンテンツ間の幅確保用 */
+
+/*コンテンツを線で囲む*/
+.border-all {
+    border: solid #f4f4f4 1px;
+}
+/*ここまでコンテンツを線で囲む*/

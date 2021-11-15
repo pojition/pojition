@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{{asset('css/components/header.css')}}">
 
     <link rel="stylesheet" href="{{asset('css/components/navigationbar.css')}}">
+    <link rel="stylesheet" href="{{asset('css/components/articlecontent.css')}}">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Abel" />
 
     {{-- JS読み込み --}}

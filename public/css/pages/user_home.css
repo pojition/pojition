@@ -46,15 +46,12 @@
     left: 0;
 }
 
-article {
-    width: 1014px;
-}
 .article-top-image {
     display: block;
-    width: 100%;
-    margin-top: 20px;
+    width: 1014px;
 }
 
+/* スマホ対応 */
 @media screen and (max-width: 1050px) {
     .main {
         width: auto;

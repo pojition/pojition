@@ -6,7 +6,7 @@ nav {
     position: fixed;
     top: 4.5vw;
     right: 6vw;
-    width: 50px;
+    width: 35px;
     height: 50px;
 }
 
@@ -17,8 +17,8 @@ nav {
     left: 0%;
     width: 35px;
     height: 20px;
-    cursor: pointer;
     z-index: 1000;
+    cursor: inherit;
 }
 
 .menu-hamburger input {
@@ -145,7 +145,7 @@ nav {
     font-family: "Abel", sans-serif;
     z-index: 999;
     animation: fadeOutNav 1s 0s ease forwards;
-    pointer-events: none;
+    cursor: default;
     background-color: #161615;
 }
 
@@ -247,6 +247,7 @@ nav {
     position: relative;
     display: block;
     pointer-events: auto;
+    cursor: pointer;
 }
 
 #menu-list > li > a::before {

@@ -28,15 +28,23 @@
             <div class="">CONTACT</div>
         </div>
     </a>
-    <article>
-        <a href="#" class="top-image article-top-image">
-            <img src="{{asset('images/pages/user_home/article-image.jpg')}}">
-            <img class="cover">
-            <div class="content">
-                <div class="">ARTICLE</div>
-            </div>
-        </a>
-    </article>
+
+    <a href="#" class="top-image article-top-image mg-bottom">
+        <img src="{{asset('images/pages/user_home/article-image.jpg')}}">
+        <img class="cover">
+        <div class="content">
+            <div class="">ARTICLE</div>
+        </div>
+    </a>
+
+    {{-- ここから記事一覧 --}}
+    {{-- @Componentで記述したかったが、それだとbladeのデータを送ることができない?
+    php artisan make:component実行後、 下記1行で対応--}}
+    {{-- https://qiita.com/silver40/items/91340763b21da916577e --}}
+    <x-articlecontent :articles=$articles titleslot='最新の記事' />
+    {{-- ここまで記事 --}}
+
+
 </div>
 @endsection
 {{-- ここまで本文 --}}
