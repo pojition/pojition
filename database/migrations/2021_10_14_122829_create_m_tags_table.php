@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class TArticles extends Migration
+class CreateMTagsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class TArticles extends Migration
      */
     public function up()
     {
-        Schema::create('t_articles', function (Blueprint $table) {
-            $table->integer('title');
-            $table->string('text');
-            $table->string('updated_at');
+        Schema::create('m_tags', function (Blueprint $table) {
+            $table->increments('tag_id')->comment('タグID');
+            $table->string('tag_name', 30)->comment('タグ名');
+            $table->unique(['tag_name']);
         });
     }
 
@@ -27,6 +27,6 @@ class TArticles extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('m_tags');
     }
 }

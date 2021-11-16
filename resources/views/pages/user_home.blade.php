@@ -13,7 +13,7 @@
 @section('mainContent')
 <div class="main">
 
-    <a href="#" class="top-image">
+    <a href="#" class="top-image border-all">
         <img src="{{asset('images/pages/user_home/top-image.jpg')}}">
         <img class="cover">
         <div class="content">
@@ -21,7 +21,7 @@
         </div>
     </a>
 
-    <a href="#" class="top-image">
+    <a href="#" class="top-image border-all">
         <img src="{{asset('images/pages/user_home/top-image2.jpg')}}">
         <img class="cover">
         <div class="content">
@@ -29,7 +29,7 @@
         </div>
     </a>
 
-    <a href="#" class="top-image article-top-image mg-bottom">
+    <a href="#" class="top-image article-top-image border-all mg-bottom">
         <img src="{{asset('images/pages/user_home/article-image.jpg')}}">
         <img class="cover">
         <div class="content">
@@ -38,10 +38,8 @@
     </a>
 
     {{-- ここから記事一覧 --}}
-    {{-- @Componentで記述したかったが、それだとbladeのデータを送ることができない?
-    php artisan make:component実行後、 下記1行で対応--}}
     {{-- https://qiita.com/silver40/items/91340763b21da916577e --}}
-    <x-articlecontent :articles=$articles titleslot='最新の記事' />
+    <x-articlecontent title='最新の記事' :articles=$articles />
     {{-- ここまで記事 --}}
 
 

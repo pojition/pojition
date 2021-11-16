@@ -6,16 +6,16 @@ use Illuminate\View\Component;
 
 class articlecontent extends Component
 {
-    public $title_slot;
+    public $title;
     public $articles;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($articles, $titleslot)
+    public function __construct($title, $articles)
     {
-        $this->title_slot = $titleslot;
+        $this->title = $title;
         $this->articles = $articles;
     }
 
