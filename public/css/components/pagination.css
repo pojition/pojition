@@ -1,0 +1,26 @@
+/* paginationのデフォルトの見た目を変えるcss */
+
+.pagination {
+    width: fit-content;
+    margin: 0 0 0 auto;
+}
+
+.pagination .page-item {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #fff;
+    text-align: center;
+    vertical-align: center;
+    font-size: 2rem;
+}
+.pagination .page-item {
+    line-height: 50px;
+}
+.pagination .active {
+    background-color: #fff;
+    color: #000;
+}
+
+.page-item:hover {
+}

@@ -16,19 +16,22 @@ class MTagSeeder extends Seeder
     {
         DB::table('m_tags')->insert([
             [
-                'tag_name' => '30代',
+                'tag_name' => '宮沢賢治',
             ],
             [
-                'tag_name' => 'Jquery',
+                'tag_name' => 'wikipedia',
             ],
             [
-                'tag_name' => 'レスポンシブ',
+                'tag_name' => '藤井聡太',
             ],
             [
-                'tag_name' => 'Webデザイナー',
+                'tag_name' => '羽生善治',
             ],
             [
-                'tag_name' => 'Webデザイン',
+                'tag_name' => '日本国憲法',
+            ],
+            [
+                'tag_name' => '夏目漱石',
             ],
 
         ]);

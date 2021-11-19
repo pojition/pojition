@@ -36,10 +36,10 @@
             <div class="">ARTICLE</div>
         </div>
     </a>
-
     {{-- ここから記事一覧 --}}
-    {{-- https://qiita.com/silver40/items/91340763b21da916577e --}}
     <x-articlecontent title='最新の記事' :articles=$articles />
+    {{-- paginate表示 --}}
+    {{-- {{$articles->links('pagination::bootstrap-4')}} --}}
     {{-- ここまで記事 --}}
 
 

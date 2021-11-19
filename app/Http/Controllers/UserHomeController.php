@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\TArticle;
+use App\Models\TArticleTag;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class UserHomeController extends Controller
@@ -10,7 +12,22 @@ class UserHomeController extends Controller
 
     public function index()
     {
-        $articles = TArticle::orderBy('updated_at', 'ASC')->take(3)->get();
+        //記事を取得(更新日順に5件)
+        $articles = TArticle::orderBy('updated_at', 'ASC')->take(5)->get()->toArray();
+
+        //取得した記事を1件ずつループ
+        for ($i = 0; $i < count($articles); $i++) {
+            //タグ情報を付加
+            $article_id = $articles[$i]['article_id'];
+            $t_tags = TArticleTag::where('article_id', $article_id)->get()->toArray();
+            $articles[$i]['tags'] = $t_tags;
+
+            //日付のフォーマットを変更
+            $dt = new Carbon($articles[$i]['created_at']);
+            $articles[$i]['created_at'] = $dt->format('Y年m月d日');
+            $dt = new Carbon($articles[$i]['updated_at']);
+            $articles[$i]['updated_at'] = $dt->format('Y年m月d日');
+        }
 
         return view('pages.user_home', compact('articles'));
     }

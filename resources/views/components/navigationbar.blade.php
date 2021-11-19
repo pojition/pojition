@@ -1,5 +1,5 @@
 {{-- navigation bar --}}
-<nav>
+<nav class="top-nav">
     <label class="menu-hamburger" for="hamburger">
         <input id="hamburger" type="checkbox">
         <div class="line one"></div>

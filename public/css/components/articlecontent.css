@@ -13,16 +13,13 @@ article #article-title {
 
 .article-content {
     margin-top: 20px;
-    /* filter: brightness(0.3); */
 }
 
 .article-block {
-    /* display:gridで実装する */
     position: relative;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    /* width: 1000px; */
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
     height: 300px;
     overflow: hidden;
     border-radius: 5px;
@@ -31,24 +28,31 @@ article #article-title {
 }
 
 .article-block img {
-    grid-column: span 3;
-    grid-row: span 6;
+    grid-column: span 6;
+    grid-row: span 12;
 }
 .article-block .block-title {
-    grid-column: span 3;
-    grid-row: span 2;
+    grid-column: span 6;
+    grid-row: span 4;
     font-size: 2.5rem;
     overflow: hidden;
 }
 .article-block .block-text {
-    grid-column: span 3;
-    grid-row: span 3;
+    grid-column: span 6;
+    grid-row: span 6;
     font-size: 1.5rem;
     overflow: hidden;
 }
+
+.article-block .block-tags {
+    grid-column: span 4;
+    grid-row: span 2;
+    font-size: 1.5rem;
+    text-align: left;
+}
 .article-block .updated_at {
-    grid-column: span 3;
-    grid-row: span 1;
+    grid-column: span 2;
+    grid-row: span 2;
     font-size: 1.5rem;
     text-align: right;
 }
@@ -61,28 +65,35 @@ article #article-title {
     transform: scale(1.05, 1.05);
 }
 .article-block:hover .article-fil {
-    /* transform: scale(1.2, 1.2); */
     filter: brightness(1);
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 767px) {
     article {
         width: 100%;
     }
+    .article-content {
+        margin: 0 30px;
+    }
     .article-block img {
-        grid-column: span 6;
-        grid-row: span 3;
+        grid-column: span 12;
+        grid-row: span 8;
     }
     .article-block .block-title {
-        grid-column: span 3;
-        grid-row: span 3;
+        grid-column: span 12;
+        grid-row: span 2;
+        font-size: 2rem;
     }
     .article-block .block-text {
-        grid-column: span 3;
+        display: none;
+    }
+    .article-block .block-tags {
+        grid-column: span 6;
         grid-row: span 2;
     }
+
     .article-block .updated_at {
-        grid-column: span 3;
-        grid-row: span 1;
+        grid-column: span 6;
+        grid-row: span 2;
     }
 }
