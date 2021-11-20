@@ -36,7 +36,7 @@
             </div>
         </div>
 
-        <a href="#" class="article-top-image border-all mg-bottom">
+        <a href="#" class="article-top-image border-all mg-bottom" ontouchstart="">
             <img src="{{asset('images/pages/user_home/article-image.jpg')}}">
             <div class="content">
                 <div class="">ARTICLE</div>
