@@ -13,7 +13,7 @@
 @section('mainContent')
 <div class="wrapper">
     <div class="main">
-        <div class="top-block-wrap">
+        <div class="top-block-wrap" ontouchstart="">
             <a href="#" class="top-image border-all">
                 <img src="{{asset('images/pages/user_home/top-image.jpg')}}">
                 <div class="content">
@@ -24,7 +24,7 @@
                 ここにプロフィール概要を書きたいと思います
             </div>
         </div>
-        <div class="top-block-wrap">
+        <div class="top-block-wrap" ontouchstart="">
             <a href="#" class="top-image border-all">
                 <img src="{{asset('images/pages/user_home/top-image2.jpg')}}">
                 <div class="content">
