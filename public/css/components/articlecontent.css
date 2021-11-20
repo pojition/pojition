@@ -1,13 +1,11 @@
 @charset "utf-8";
 article {
     width: 1014px;
-    margin-left: 5px;
-    margin-right: 5px;
     font-family: arno-pro-caption, serif;
 }
 article #article-title {
     display: block;
-    font-size: 4rem;
+    font-size: 3rem;
     border-bottom: solid 1px;
 }
 
@@ -18,41 +16,40 @@ article #article-title {
 .article-block {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-    height: 300px;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
     overflow: hidden;
     border-radius: 5px;
     font-weight: 0.8;
     transition: 0.3s;
+    height: fit-content;
+}
+
+.article-block div {
+    grid-column: span 6;
 }
 
 .article-block img {
     grid-column: span 6;
-    grid-row: span 12;
+    /* 縦横比率がおかしい画像はこれで調整 */
+    max-height: 400px;
 }
+
+.article-block .updated_at {
+    font-size: 1.5rem;
+    text-align: left;
+}
+
 .article-block .block-title {
-    grid-column: span 6;
-    grid-row: span 4;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     overflow: hidden;
 }
+
 .article-block .block-text {
-    grid-column: span 6;
-    grid-row: span 6;
     font-size: 1.5rem;
     overflow: hidden;
 }
 
 .article-block .block-tags {
-    grid-column: span 4;
-    grid-row: span 2;
-    font-size: 1.5rem;
-    text-align: left;
-}
-.article-block .updated_at {
-    grid-column: span 2;
-    grid-row: span 2;
     font-size: 1.5rem;
     text-align: right;
 }
@@ -72,28 +69,16 @@ article #article-title {
     article {
         width: 100%;
     }
-    .article-content {
-        margin: 0 30px;
-    }
-    .article-block img {
+
+    .article-block img,
+    .article-block div {
         grid-column: span 12;
-        grid-row: span 8;
     }
+
     .article-block .block-title {
-        grid-column: span 12;
-        grid-row: span 2;
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     .article-block .block-text {
         display: none;
-    }
-    .article-block .block-tags {
-        grid-column: span 6;
-        grid-row: span 2;
-    }
-
-    .article-block .updated_at {
-        grid-column: span 6;
-        grid-row: span 2;
     }
 }

@@ -19,7 +19,11 @@ class UserHomeController extends Controller
         for ($i = 0; $i < count($articles); $i++) {
             //タグ情報を付加
             $article_id = $articles[$i]['article_id'];
-            $t_tags = TArticleTag::where('article_id', $article_id)->get()->toArray();
+            $t_tags = TArticleTag
+                ::join('m_tags', 't_article_tags.tag_id', '=', 'm_tags.tag_id')
+                ->where('article_id', $article_id)
+                ->get()
+                ->toArray(); //コレクション型→連想配列
             $articles[$i]['tags'] = $t_tags;
 
             //日付のフォーマットを変更

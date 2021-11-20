@@ -11,38 +11,43 @@
 
 {{-- ここから本文 --}}
 @section('mainContent')
-<div class="main">
-
-    <a href="#" class="top-image border-all">
-        <img src="{{asset('images/pages/user_home/top-image.jpg')}}">
-        <img class="cover">
-        <div class="content">
-            <div class="">PROFILE</div>
+<div class="wrapper">
+    <div class="main">
+        <div class="top-block-wrap">
+            <a href="#" class="top-image border-all">
+                <img src="{{asset('images/pages/user_home/top-image.jpg')}}">
+                <div class="content">
+                    <div class="">PROFILE</div>
+                </div>
+            </a>
+            <div>
+                ここにプロフィール概要を書きたいと思います
+            </div>
         </div>
-    </a>
-
-    <a href="#" class="top-image border-all">
-        <img src="{{asset('images/pages/user_home/top-image2.jpg')}}">
-        <img class="cover">
-        <div class="content">
-            <div class="">CONTACT</div>
+        <div class="top-block-wrap">
+            <a href="#" class="top-image border-all">
+                <img src="{{asset('images/pages/user_home/top-image2.jpg')}}">
+                <div class="content">
+                    <div class="">CONTACT</div>
+                </div>
+            </a>
+            <div>
+                こっちはコンタクト
+            </div>
         </div>
-    </a>
 
-    <a href="#" class="top-image article-top-image border-all mg-bottom">
-        <img src="{{asset('images/pages/user_home/article-image.jpg')}}">
-        <img class="cover">
-        <div class="content">
-            <div class="">ARTICLE</div>
-        </div>
-    </a>
-    {{-- ここから記事一覧 --}}
-    <x-articlecontent title='最新の記事' :articles=$articles />
-    {{-- paginate表示 --}}
-    {{-- {{$articles->links('pagination::bootstrap-4')}} --}}
-    {{-- ここまで記事 --}}
+        <a href="#" class="article-top-image border-all mg-bottom">
+            <img src="{{asset('images/pages/user_home/article-image.jpg')}}">
+            <div class="content">
+                <div class="">ARTICLE</div>
+            </div>
+        </a>
+        {{-- ここから記事一覧 --}}
+        <x-articlecontent title='最新の記事' :articles=$articles />
+        {{-- ここまで記事 --}}
 
 
+    </div>
+    @endsection
+    {{-- ここまで本文 --}}
 </div>
-@endsection
-{{-- ここまで本文 --}}

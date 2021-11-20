@@ -8,8 +8,10 @@ html {
     padding: 0;
 }
 
+/* ブラウザのデフォルトスタイルを初期化 */
 * {
-    word-break: break-all;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -47,6 +49,13 @@ img {
     margin-bottom: 20px;
 }
 
+.mg-left10 {
+    margin-left: 10px;
+}
+.mg-right10 {
+    margin-right: 10px;
+}
+
 .pd-top10 {
     padding-top: 10px;
 }
@@ -69,3 +78,8 @@ img {
     border: solid #444343 1px;
 }
 /*ここまでコンテンツを線で囲む*/
+
+/*mainコンテンツのmarginをとる用*/
+.wrapper {
+    margin: 20px;
+}
