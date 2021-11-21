@@ -14,10 +14,15 @@
     <link rel="stylesheet" href="{{asset('css/components/header.css')}}">
 
     {{-- CSS-Components --}}
-    <link rel="stylesheet" href="{{asset('css/components/pagination.css')}}">
+    <link rel="stylesheet" href="{{asset('css/components/loading.css')}}">
     <link rel="stylesheet" href="{{asset('css/components/navigationbar.css')}}">
+    <link rel="stylesheet" href="{{asset('css/components/pagination.css')}}">
     <link rel="stylesheet" href="{{asset('css/components/articlecontent.css')}}">
     <link rel="stylesheet" href="{{asset('css/components/t_tag.css')}}">
+
+    {{--JS Component --}}
+    <script src="{{asset('js/components/loading.js')}}"></script>
+    <script src="{{asset('js/components/hover_point.js')}}"></script>
 
     {{-- Font --}}
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Abel" />
