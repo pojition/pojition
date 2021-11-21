@@ -40,8 +40,8 @@ $(function () {
         return transDeg;
     }
 
-    //マウスmoveアクション
-    $(".hover-point").mousemove(function () {
+    //
+    function rotateObj() {
         var transDeg = calcDeg(this);
         $(this).css({
             transform:
@@ -55,7 +55,16 @@ $(function () {
                 "deg)",
             opacity: "0.75",
         });
-    });
+    }
+
+    //マウスmoveアクション
+    $(".hover-point").mousemove(rotateObj);
+
+    //スマホタッチstartアクション
+    $(".hover-point").touchstart(rotateObj);
+
+    //スマホタッチmoveアクション
+    $(".hover-point").touchmove(rotateObj);
 
     //マウスmoveoutアクション
     $(".hover-point").mouseout(function () {
