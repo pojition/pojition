@@ -61,10 +61,10 @@ $(function () {
     $(".hover-point").mousemove(rotateObj);
 
     //スマホタッチstartアクション
-    $(".hover-point").touchstart(rotateObj);
+    $(".hover-point").on("touchstart", rotateObj);
 
     //スマホタッチmoveアクション
-    $(".hover-point").touchmove(rotateObj);
+    $(".hover-point").on("touchmove", rotateObj);
 
     //マウスmoveoutアクション
     $(".hover-point").mouseout(function () {

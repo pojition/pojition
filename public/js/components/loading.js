@@ -6,13 +6,13 @@ $(function () {
     $(".wrapper").hide();
 });
 
-//全ての読み込みが完了したら実行
-
+//全ての読み込みが完了したら実行(最低でも1秒は表示)
 $(window).on("load", function () {
     setTimeout(function () {
-        $(".loading").hide();
-        $("header").show();
-        $(".wrapper").show();
+        $.when($(".loading").fadeOut(1500)).done(function () {
+            $("header").show();
+            $(".wrapper").show();
+        });
     }, 3000);
 });
 
