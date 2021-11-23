@@ -4,9 +4,43 @@ header {
     position: sticky;
     top: 0;
     left: 0;
-    z-index: 9998;
     height: 110px;
     width: 100%;
-    background-color: rgb(53, 51, 51);
     margin-bottom: 30px;
+    z-index: 9998;
+    background-color: #000000b3;
 }
+/* .border-top {
+    top: 0;
+    left: 0;
+    height: 110px;
+    width: 100%;
+    margin-bottom: 30px;
+    background-color: #000000b3;
+}
+
+.border-left {
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 100vh;
+    left: 0;
+    background-color: #000000b3;
+}
+
+.border-right {
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 100vh;
+    right: 0;
+    background-color: #000000b3;
+}
+
+.border-bottom {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background-color: #000000b3;
+} */

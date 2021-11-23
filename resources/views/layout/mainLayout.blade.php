@@ -40,6 +40,7 @@
     @component('components.header')
     @endcomponent
     {{-- ここまでheader --}}
+
     <!-- ここからnavigation bar -->
     @component('components.navigationbar')
     @endcomponent

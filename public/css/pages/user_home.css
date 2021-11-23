@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 .main {
+    font-size: 2rem;
     z-index: 998;
     margin: 0 auto;
     width: fit-content;
@@ -12,6 +13,7 @@
     width: 500px;
     box-sizing: border-box;
     display: inline-grid;
+    border: solid 1px #444343;
 }
 .top-block-wrap:nth-child(2) {
     margin-left: 10px;
@@ -58,7 +60,24 @@
     z-index: 0;
     font-size: 6rem;
 }
+.profile-wrap {
+    width: 100%;
+    margin: 20px 0;
+    height: fit-content;
+    /* background-color: rgba(255, 255, 255, 0.644); */
+    /* color: #000; */
+    font-size: 3rem;
+    font-family: "Abel";
+}
 
+.myname {
+}
+
+.career,
+.birth {
+    font-size: 2rem;
+    padding-bottom: 20px;
+}
 /* 767px以下からスマホ対応 */
 @media screen and (max-width: 1065px) {
     .main {

@@ -25,9 +25,21 @@
                     <div class="">PROFILE</div>
                 </div>
             </a>
-            <div>
-                ここにプロフィール概要を書きたいと思います
+            <div class="profile-wrap">
+                <div class="myname">
+                    MAO KOYAMA
+                </div>
+                <div class="birth">
+                    1998.03.18 生まれ
+                </div>
+                <div class="career">
+                    2016.04 ●●に入学<br>
+                    2020.03 ●●大学を4年で卒業<br>
+                    2020.04 株式会社●●に入社
+                    2021.11 現在も就業中。
+                </div>
             </div>
+
         </div>
         <div class="top-block-wrap" ontouchstart="">
             <a href="#" class="top-image hover-point">
@@ -36,7 +48,7 @@
                     <div class="">CONTACT</div>
                 </div>
             </a>
-            <div>
+            <div class="mail">
                 こっちはコンタクト
             </div>
         </div>
