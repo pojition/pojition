@@ -6,14 +6,12 @@ $(function () {
     $(".wrapper").hide();
 });
 
-//全ての読み込みが完了したら実行(最低でも1秒は表示)
+//全ての読み込みが完了したら実行
 $(window).on("load", function () {
-    setTimeout(function () {
-        $.when($(".loading").fadeOut(1500)).done(function () {
-            $("header").show();
-            $(".wrapper").show();
-        });
-    }, 3000);
+    $.when($(".loading").fadeOut(1500)).done(function () {
+        $("header").show();
+        $(".wrapper").show();
+    });
 });
 
 //10秒たったら強制的にロード画面を非表示

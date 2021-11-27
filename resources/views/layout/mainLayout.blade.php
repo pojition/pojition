@@ -36,6 +36,11 @@
 </head>
 
 <body>
+    {{-- Loading画面読み込み --}}
+    @component('components.loading')
+    @endcomponent
+    {{-- Loading画面ここまで --}}
+
     {{-- ここからheader --}}
     @component('components.header')
     @endcomponent

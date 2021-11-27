@@ -12,9 +12,7 @@
 {{-- ここから本文 --}}
 @section('mainContent')
 
-{{-- Loading画面読み込み --}}
-@component('components.loading')
-@endcomponent
+
 
 <div class="wrapper">
     <div class="main">
@@ -48,19 +46,22 @@
                     <div class="">CONTACT</div>
                 </div>
             </a>
-            <div class="mail">
-                こっちはコンタクト
+            <div class="mail-wrap">
+                <div class="mail">
+                    ツイッターやインスタグラムも稼働中です！
+                    ぜひフォローお願いします！
+                </div>
             </div>
         </div>
 
-        <a href="#" class="article-top-image hover-point mg-bottom" ontouchstart="">
+        <a href="{{url('article/list')}}" class="article-top-image hover-point mg-bottom" ontouchstart="">
             <img src="{{asset('images/pages/user_home/article-image.jpg')}}">
             <div class="content">
                 <div class="">ARTICLE</div>
             </div>
         </a>
         {{-- ここから記事一覧 --}}
-        <x-articlecontent title='最新の記事' :articles=$articles />
+        <x-articlecontent title='Recent Articles' :articles=$articles />
         {{-- ここまで記事 --}}
 
 

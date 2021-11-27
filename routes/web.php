@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserHomeController;
+use App\Http\Controllers\ArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +16,12 @@ use App\Http\Controllers\UserHomeController;
 */
 
 
+//ユーザホーム画面
 Route::get('/', [UserHomeController::class, 'index']);
+
+//記事一覧画面
+Route::get('/article/list', [ArticleController::class, 'getArticleList']);
+//検索ボックス入力時はこっち
+Route::get('/article/list/search', [ArticleController::class, 'getSearchArticleList']);
+//タグ検索はこっち
+Route::get('/article/list/search/tag/{tag_name}', [ArticleController::class, 'getTagSearchArticleList']);

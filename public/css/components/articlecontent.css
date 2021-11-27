@@ -1,6 +1,5 @@
 @charset "utf-8";
 article {
-    width: 1014px;
     font-family: arno-pro-caption, serif;
 }
 article #article-title {
@@ -10,6 +9,7 @@ article #article-title {
 }
 
 .article-content {
+    display: inline-grid;
     margin-top: 20px;
 }
 
@@ -65,9 +65,14 @@ article #article-title {
     filter: brightness(1);
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1020px) {
     article {
         width: 100%;
+    }
+
+    .article-content {
+        grid-template-columns: 50% 1fr;
+        grid-gap: 10px 10px;
     }
 
     .article-block img,
@@ -78,6 +83,13 @@ article #article-title {
     .article-block .block-title {
         font-size: 1.8rem;
     }
+}
+
+@media screen and (max-width: 767px) {
+    .article-content {
+        grid-template-columns: 100%;
+    }
+
     .article-block .block-text {
         display: none;
     }

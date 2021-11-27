@@ -60,12 +60,11 @@
     z-index: 0;
     font-size: 6rem;
 }
-.profile-wrap {
+.profile-wrap,
+.mail-wrap {
     width: 100%;
     margin: 20px 0;
     height: fit-content;
-    /* background-color: rgba(255, 255, 255, 0.644); */
-    /* color: #000; */
     font-size: 3rem;
     font-family: "Abel";
 }
@@ -74,10 +73,18 @@
 }
 
 .career,
-.birth {
+.birth,
+.mail {
     font-size: 2rem;
     padding-bottom: 20px;
 }
+
+/* articlecontent.cssを上書き */
+article {
+    width: 1014px;
+}
+/*****************************/
+
 /* 767px以下からスマホ対応 */
 @media screen and (max-width: 1065px) {
     .main {

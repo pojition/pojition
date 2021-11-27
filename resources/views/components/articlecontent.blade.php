@@ -21,7 +21,8 @@
                 {{--タグ --}}
                 <div class="block-tags pd-10">
                     @foreach ($article['tags'] as $tags)
-                    <object><a href="{{url('/articles/tag').'/'.$tags['tag_name']}}" class="t-tag" ontouchstart="">
+                    <object><a href="{{url('article/list/search/tag').'/'.$tags['tag_name']}}" class="t-tag"
+                            ontouchstart="">
                             {{$tags['tag_name']}}</a></object>
                     @endforeach
                 </div>
