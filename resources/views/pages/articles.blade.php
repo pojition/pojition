@@ -6,6 +6,7 @@
 @endsection
 @section('LoadCSS')
 <link rel="stylesheet" href="{{asset('css/pages/articles.css')}}">
+<link rel="stylesheet" href="{{asset('css/components/searchbar.css')}}">
 @endsection
 {{-- ここまでファイル読み込み --}}
 
