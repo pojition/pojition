@@ -6,6 +6,12 @@
     display: flex;
     gap: 10px 20px;
 }
+.big-title-article {
+    text-align: center;
+    font-size: 5rem;
+    font-family: arno-pro-caption, serif;
+    /* border-bottom: solid 1px; */
+}
 
 .article-block-wrap {
     flex: 1;
@@ -18,6 +24,12 @@
 }
 .search-block-wrap {
     width: 250px;
+    margin-top: 20px;
+}
+
+/* ボーダー線打ち消し */
+article #article-title {
+    border-bottom: none !important;
 }
 
 /* スマホ対応 */

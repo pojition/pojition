@@ -36,6 +36,9 @@
 </head>
 
 <body>
+    {{-- ページ共通の背景画像 --}}
+    <img class="big-bg" src="{{asset('images/common/big-bg1.jpg')}}">
+
     {{-- Loading画面読み込み --}}
     @component('components.loading')
     @endcomponent

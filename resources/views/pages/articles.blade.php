@@ -13,6 +13,9 @@
 {{-- ここから本文 --}}
 @section('mainContent')
 <div class="wrapper">
+
+    <div class="big-title-article">Article
+    </div>
     <div class="main">
         <div class="article-block-wrap">
             @isset($search)
@@ -25,15 +28,14 @@
                 Tag-Search results for「{{$tag['name']}}」：{{$tag['count']}}
             </div>
             @endisset
-            <x-articlecontent title='Articles' :articles=$articles />
+            <x-articlecontent title='' :articles=$articles />
             {{ $page_link->appends(request()->query())->links('pagination::bootstrap-4') }}
 
         </div>
-        <div class="search-block-wrap border-all">
+        <div class="search-block-wrap">
             <x-searchbar :mtags=$m_tags />
         </div>
     </div>
-
 
     @endsection
     {{-- 本文ここまで --}}

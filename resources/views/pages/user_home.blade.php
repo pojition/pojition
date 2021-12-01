@@ -12,8 +12,6 @@
 {{-- ここから本文 --}}
 @section('mainContent')
 
-
-
 <div class="wrapper">
     <div class="main">
         <div class="top-block-wrap" ontouchstart="">

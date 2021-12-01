@@ -18,6 +18,16 @@ body {
     background-color: #2c2c2c;
     color: #f4f4f4;
 }
+
+/* 背景画像 */
+.big-bg {
+    position: fixed;
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+}
+
 ul,
 li {
     list-style: none;
