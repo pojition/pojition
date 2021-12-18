@@ -13,10 +13,12 @@
                 </div>
 
                 <ul id="menu-list">
-                    <li><a href="#"><span class="menu-en">TOP</span><span class="menu-ja">ホームに戻る</span></a></li>
+                    <li><a href="{{url('/')}}"><span class="menu-en">TOP</span><span class="menu-ja">ホームに戻る</span></a>
+                    </li>
                     <li><a href="#"><span class="menu-en">PROFILE</span><span class="menu-ja">自己紹介ページへ</span></a>
                     </li>
-                    <li><a href="#"><span class="menu-en">ARTICLE</span><span class="menu-ja">記事一覧へ</span></a>
+                    <li><a href="{{url('/article/list')}}"><span class="menu-en">ARTICLE</span><span
+                                class="menu-ja">記事一覧へ</span></a>
                     </li>
                     <li><a href="#"><span class="menu-en">CONTACT</span><span class="menu-ja">メールやSNSはこちら</span></a>
                     </li>

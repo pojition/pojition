@@ -8,7 +8,7 @@ $(function () {
 
 //全ての読み込みが完了したら実行
 $(window).on("load", function () {
-    $.when($(".loading").fadeOut(1500)).done(function () {
+    $.when($(".loading").fadeOut(1000)).done(function () {
         $("header").show();
         $(".wrapper").show();
     });

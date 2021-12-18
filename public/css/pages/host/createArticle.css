@@ -1,0 +1,98 @@
+/* 記事作成画面スタイル */
+@charset "utf-8";
+
+body {
+    font-family: "Economica", "Noto Sans Japanese", "Font Awesome 5 Free";
+}
+
+.main {
+    margin: 10px;
+}
+
+/* radioボタンは非表示にする */
+#both,
+#edit,
+#preview {
+    display: none;
+}
+
+.tab-area {
+    margin: 0 0 0 auto;
+    width: fit-content;
+    display: flex;
+}
+
+.tab-area label {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px 10px 10px;
+    margin-left: 5px;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 1;
+    background-color: #000;
+}
+
+.tab-area .tab-both {
+    background-color: transparent;
+}
+.block-wrap {
+    display: flex;
+}
+
+.block {
+    /* min-width: 1335px; */
+    width: 100%;
+    height: 500px;
+    background-color: #000;
+}
+
+#edit:checked ~ .tab-area .tab-preview,
+#preview:checked ~ .tab-area .tab-edit {
+    background-color: transparent;
+}
+
+#edit:checked ~ .block-wrap .preview,
+#preview:checked ~ .block-wrap .compose {
+    display: none;
+}
+
+#both:checked ~ .block-wrap .block.preview {
+    margin-left: 4px;
+}
+
+.input-field {
+    width: auto;
+    margin: 10px 0;
+}
+
+.input-field input,
+.input-field textarea {
+    display: block;
+    width: 100%;
+    background-color: #000;
+    border: solid 1px rgb(80, 80, 80);
+    font-size: 3rem;
+    color: #fff;
+}
+
+.input-field textarea {
+    height: 800px;
+    resize: none;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.sub-title {
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+.article.main {
+    margin-top: 50px;
+}

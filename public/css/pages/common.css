@@ -1,4 +1,7 @@
 /* 共通部分はできるだけこのcssに記載しまとめる */
+@import url(https://use.fontawesome.com/releases/v5.6.1/css/all.css);
+@import url(https://fonts.googleapis.com/css?family=Economica:700);
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
 
 html {
     /* 1rem=10pxとする */
@@ -17,6 +20,11 @@ html {
 body {
     background-color: #2c2c2c;
     color: #f4f4f4;
+}
+
+.font-decorated,
+.font-decorated * {
+    font-family: "Economica", "Noto Sans Japanese", "Font Awesome 5 Free";
 }
 
 /* 背景画像 */

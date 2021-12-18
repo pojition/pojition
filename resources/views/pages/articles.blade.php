@@ -13,7 +13,6 @@
 {{-- ここから本文 --}}
 @section('mainContent')
 <div class="wrapper">
-
     <div class="big-title-article">Article
     </div>
     <div class="main">
@@ -36,6 +35,6 @@
             <x-searchbar :mtags=$m_tags />
         </div>
     </div>
-
-    @endsection
-    {{-- 本文ここまで --}}
+</div>
+@endsection
+{{-- 本文ここまで --}}

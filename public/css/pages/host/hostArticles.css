@@ -1,0 +1,151 @@
+@charset "utf-8";
+
+/* .new-btn {
+    display: inline-block;
+    margin: 30px;
+    border: solid #444343 1px;
+    background-color: rgb(150, 17, 184);
+}
+
+.new-btn a {
+    font-size: 3rem;
+    font-family: arno-pro-caption, serif;
+    text-align: center;
+    width: 100%;
+} */
+
+.btn,
+a.btn,
+button.btn {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.5;
+    position: relative;
+    display: inline-block;
+    padding: 1rem 4rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    color: #212529;
+    border-radius: 0.5rem;
+}
+
+.btn--orange,
+a.btn--orange {
+    color: #fff;
+    background-color: #eb6100;
+}
+.btn--orange:hover,
+a.btn--orange:hover {
+    color: #fff;
+    background: #f56500;
+}
+
+/**
+* ここからarticlecontent.cssを転記
+*
+**/
+article {
+    font-family: arno-pro-caption, serif;
+}
+article #article-title {
+    display: block;
+    font-size: 3rem;
+    border-bottom: solid 1px;
+}
+
+.article-content {
+    display: inline-grid;
+    margin-top: 20px;
+}
+
+.article-block {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    overflow: hidden;
+    border-radius: 5px;
+    font-weight: 0.8;
+    transition: 0.3s;
+    height: fit-content;
+    background-color: #2c2c2c;
+}
+
+.article-block div {
+    grid-column: span 6;
+}
+
+.article-block img {
+    grid-column: span 6;
+    /* 縦横比率がおかしい画像はこれで調整 */
+    max-height: 400px;
+}
+
+.article-block .updated_at {
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.article-block .block-title {
+    font-size: 2.3rem;
+    overflow: hidden;
+}
+
+.article-block .block-text {
+    font-size: 1.5rem;
+    overflow: hidden;
+}
+
+.article-block .block-tags {
+    font-size: 1.5rem;
+    text-align: right;
+}
+
+.article-fil {
+    filter: brightness(0.7);
+}
+.article-block:hover {
+    filter: brightness(1.3);
+    transform: scale(1.05, 1.05);
+}
+.article-block:hover .article-fil {
+    filter: brightness(1);
+}
+
+@media screen and (max-width: 1020px) {
+    article {
+        width: 100%;
+    }
+
+    .article-content {
+        grid-template-columns: 50% 1fr;
+        grid-gap: 10px 10px;
+    }
+
+    .article-block img,
+    .article-block div {
+        grid-column: span 12;
+    }
+
+    .article-block .block-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .article-content {
+        grid-template-columns: 100%;
+    }
+
+    .article-block .block-text {
+        display: none;
+    }
+}

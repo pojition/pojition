@@ -14,14 +14,14 @@ class ArticleController extends Controller
     /**
      * 初回ロード時
      */
-    public function  getArticleList()
+    public function  getArticleList(Request $request)
     {
 
         $articles_obj = TArticle::orderBy('updated_at', 'ASC');
 
         //記事を取得(pagination実装)
-        $articles = $articles_obj->take(3)->get()->toArray();
-        $page_link = $articles_obj->paginate(3);
+        $articles = $articles_obj->offset(2 * ($request->input('page') - 1))->limit(2)->get()->toArray();
+        $page_link = $articles_obj->paginate(2);
 
         $articles = $this->manufactArticles($articles);
         //タグ情報を全て取得
@@ -46,8 +46,8 @@ class ArticleController extends Controller
 
 
         //記事を取得(pagination実装)
-        $articles = $articles_obj->take(3)->get()->toArray();
-        $page_link = $articles_obj->paginate(3);
+        $articles = $articles_obj->offset(2 * ($request->input('page') - 1))->limit(2)->get()->toArray();
+        $page_link = $articles_obj->paginate(2);
 
         $articles = $this->manufactArticles($articles);
 
@@ -61,7 +61,7 @@ class ArticleController extends Controller
     /**
      * 記事検索時(タグ検索)
      */
-    public function getTagSearchArticleList($tag_name)
+    public function getTagSearchArticleList(Request $request, $tag_name)
     {
         $articles_obj =
             TArticle
@@ -73,8 +73,8 @@ class ArticleController extends Controller
         $tag['count'] = $articles_obj->count();
 
         //記事を取得(pagination実装)
-        $articles = $articles_obj->take(3)->get()->toArray();
-        $page_link = $articles_obj->paginate(3);
+        $articles = $articles_obj->offset(2 * ($request->input('page') - 1))->limit(2)->get()->toArray();
+        $page_link = $articles_obj->paginate(2);
 
         $articles = $this->manufactArticles($articles);
         //タグ情報を全て取得
