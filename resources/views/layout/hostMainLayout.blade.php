@@ -6,6 +6,8 @@
     <title>Mao</title>
     <meta data-n-head="ssr" charset="utf-8">
     <meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
 
     {{-- ここからアプリ共通 --}}
     {{-- ライブラリ --}}

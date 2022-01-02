@@ -1,19 +1,5 @@
 @charset "utf-8";
 
-/* .new-btn {
-    display: inline-block;
-    margin: 30px;
-    border: solid #444343 1px;
-    background-color: rgb(150, 17, 184);
-}
-
-.new-btn a {
-    font-size: 3rem;
-    font-family: arno-pro-caption, serif;
-    text-align: center;
-    width: 100%;
-} */
-
 .btn,
 a.btn,
 button.btn {

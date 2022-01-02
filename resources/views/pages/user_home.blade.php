@@ -2,7 +2,7 @@
 
 {{-- 各ファイル読み込み --}}
 @section('LoadJS')
-
+<script src="{{asset('js/pages/user_home.js')}}"></script>
 @endsection
 @section('LoadCSS')
 <link rel="stylesheet" href="{{asset('css/pages/user_home.css')}}">
@@ -39,7 +39,7 @@
         </div>
         <div class="top-block-wrap" ontouchstart="">
             <a href="#" class="top-image hover-point">
-                <img src="{{asset('images/pages/user_home/top-image2.jpg')}}">
+                <img id="contact-btn" src="{{asset('images/pages/user_home/top-image2.jpg')}}">
                 <div class="content">
                     <div class="">CONTACT</div>
                 </div>

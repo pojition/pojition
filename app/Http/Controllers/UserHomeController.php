@@ -4,14 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Models\TArticle;
 use App\Models\TArticleTag;
+use App\Models\TChat;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class UserHomeController extends Controller
 {
 
     public function index()
     {
+
+
         //記事を取得(更新日順に5件)
         $articles = TArticle::orderBy('updated_at', 'ASC')->take(3)->get()->toArray();
 

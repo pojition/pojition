@@ -8,6 +8,20 @@
                 <li><a href="{{url('/contact')}}">CONTACT</a></li>
             </ul>
         </div>
+
+
+        <div class="header-login">
+            @if (Auth::check())
+            {{-- ログイン済みのとき --}}
+            <a href="{{ url('/dashboard') }}">マイページへ</a>
+            <a href="{{ url('/chat') }}">チャット画面へ</a>
+
+            @else
+            {{-- ログインしていないとき --}}
+            <a href="{{ url('/login') }}">ログイン</a>
+            @endif
+
+        </div>
     </div>
 
 </header>

@@ -4,6 +4,10 @@
     <title>Mao</title>
     <meta data-n-head="ssr" charset="utf-8">
     <meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    {{-- Vue.js使用時に必要 --}}
+    <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
+
 
     {{-- ここからアプリ共通 --}}
     {{-- ライブラリ --}}
@@ -12,6 +16,9 @@
     {{-- CSS-Pages --}}
     <link rel="stylesheet" href="{{asset('css/pages/common.css')}}">
     <link rel="stylesheet" href="{{asset('css/components/header.css')}}">
+
+    {{-- Font Awesome --}}
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 
     {{-- CSS-Components --}}
     <link rel="stylesheet" href="{{asset('css/components/loading.css')}}">
