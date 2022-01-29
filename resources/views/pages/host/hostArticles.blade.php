@@ -10,14 +10,14 @@
 @section('mainContent')
 <div class="main">
     <div>
-        <a class="btn btn--orange" href="{{url('/hostArticle/create')}}">New</a>
+        <a class="btn btn--orange" href="{{url('/knowledge/postArticle')}}">New</a>
     </div>
     <article>
         <div id="article-title"></div>
         <div class="article-content">
 
             @foreach ($articles as $article)
-            <a href="{{url('/hostArticles').'/?id='.$article['article_id']}}"
+            <a href="{{url('knowledge/postArticle').'/'.$article['article_id'].'/edit'}}"
                 class="article-block mg-top mg-bottom border-all">
                 <img class="article-fil" src="{{asset('images/t_articles'.'/'.$article['top_image'])}}">
                 <div class="pd-10">

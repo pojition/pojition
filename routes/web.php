@@ -3,7 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserHomeController;
 use App\Http\Controllers\ChatController;
-use App\Http\Controllers\HostArticleController;
+use App\Http\Controllers\Knowledge\HostArticleController;
+use App\Http\Controllers\Knowledge\PostArticleController;
 use App\Http\Controllers\ArticleController;
 
 /*
@@ -70,14 +71,10 @@ Route::prefix('article/list')->group(function () {
 |-------------------------------------------------------------------------
 */
 
-// 管理者画面
-Route::prefix('hostArticle')->group(function () {
+// 記事関連
+Route::prefix('knowledge')->group(function () {
     //記事一覧
     Route::get('list', [HostArticleController::class, 'getHostArticleList']);
-    //記事作成
-    Route::get('create', [HostArticleController::class, 'createArticle']);
-    //記事作成実行
-    Route::get('executeCreate', [HostArticleController::class, 'executeCreateArticle']);
-    //記事編集
-    Route::get('update', [HostArticleController::class, 'updateArticle']);
+    //記事作成関連（Restful化、この１行でCRUD全てのルーティングを管理できる！）
+    Route::resource('postArticle', PostArticleController::class);
 });

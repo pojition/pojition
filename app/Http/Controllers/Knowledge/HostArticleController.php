@@ -1,21 +1,24 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Knowledge;
+
 
 use App\Models\TArticle;
 use App\Models\TArticleTag;
 use App\Models\MTag;
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\ArticleController;
 use Illuminate\Http\Request;
 
 class HostArticleController extends Controller
 {
     /**
-     * 初回ロード時
+     * 管理者記事一覧画面
      */
     public function  getHostArticleList(Request $request)
     {
 
-        $articles_obj = TArticle::orderBy('updated_at', 'ASC');
+        $articles_obj = TArticle::orderBy('updated_at', 'DESC');
 
         //記事を取得(pagination実装)
         $articles = $articles_obj->offset(2 * ($request->input('page') - 1))->limit(2)->get()->toArray();
@@ -26,16 +29,5 @@ class HostArticleController extends Controller
         $m_tags = MTag::all();
 
         return view('pages/host/hostArticles', compact('articles', 'page_link', 'm_tags'));
-    }
-
-
-
-    public function createArticle()
-    {
-        return view('pages/host/createArticle');
-    }
-
-    public function updateArticle()
-    {
     }
 }
