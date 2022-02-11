@@ -16,7 +16,6 @@ $(function () {
         })
             //通信が成功したとき
             .done((res) => {
-                console.log("チャット取得！");
                 $chat = res["chat"];
                 $html =
                     "<div class='left'>" + $chat["content"] + "</div><br><br>";
@@ -24,9 +23,7 @@ $(function () {
                 $("#input-textarea").val("");
             })
             //通信が失敗したとき
-            .fail((error) => {
-                console.log("正常に登録できません");
-            });
+            .fail((error) => {});
     });
 
     // 0.5秒間隔でチャット部分にリロードをかける
