@@ -16,6 +16,7 @@ $(function () {
         })
             //通信が成功したとき
             .done((res) => {
+                console.log("チャット取得！");
                 $chat = res["chat"];
                 $html =
                     "<div class='left'>" + $chat["content"] + "</div><br><br>";
