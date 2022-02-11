@@ -11,7 +11,7 @@ $(function () {
         $.ajax({
             type: "post", //HTTP通信の種類
             data: $(obj).serialize(),
-            url: "../../chat/chatInsert", //通信したいURL
+            url: "chat/chatInsert", //通信したいURL
             dataType: "json",
         })
             //通信が成功したとき
@@ -34,7 +34,7 @@ $(function () {
     setInterval(function () {
         $.ajax({
             type: "post", //HTTP通信の種類
-            url: "../../chat/chatReload", //通信したいURL
+            url: "chat/chatReload", //通信したいURL
             dataType: "json",
         })
             //通信が成功したとき
