@@ -59,6 +59,8 @@ Route::prefix('article/list')->group(function () {
     Route::get('tag/{tag_name}', [ArticleController::class, 'getTagSearchArticleList']);
 });
 
+//記事画面
+Route::get('article/show/{id}', [ArticleController::class, 'showArticle']);
 
 
 

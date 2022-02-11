@@ -17,7 +17,7 @@ class UserHomeController extends Controller
 
 
         //記事を取得(更新日順に5件)
-        $articles = TArticle::orderBy('updated_at', 'ASC')->take(3)->get()->toArray();
+        $articles = TArticle::orderBy('updated_at', 'DESC')->take(3)->get()->toArray();
 
         //取得した記事を1件ずつループ
         for ($i = 0; $i < count($articles); $i++) {

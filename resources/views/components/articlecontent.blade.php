@@ -3,7 +3,7 @@
     <div class="article-content">
 
         @foreach ($articles as $article)
-        <a href="#" class="article-block mg-top mg-bottom border-all">
+        <a href="{{url('article/show/'.$article['article_id'])}}" class="article-block mg-top mg-bottom border-all">
             <img class="article-fil" src="{{asset('images/t_articles'.'/'.$article['top_image'])}}">
             <div class="pd-10">
                 {{-- 更新日 --}}

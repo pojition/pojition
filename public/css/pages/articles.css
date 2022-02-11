@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 .main {
-    width: fit-content;
+    /* width: fit-content; */
     margin: 0 auto;
     display: flex;
     gap: 10px 20px;
@@ -42,7 +42,7 @@ article #article-title {
 
     .article-block-wrap,
     .search-block-wrap {
-        width: 100%;
+        width: 100% !important;
     }
     .big-title-article {
         text-align: center;

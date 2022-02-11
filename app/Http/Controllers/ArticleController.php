@@ -17,7 +17,7 @@ class ArticleController extends Controller
     public function  getArticleList(Request $request)
     {
 
-        $articles_obj = TArticle::orderBy('updated_at', 'ASC');
+        $articles_obj = TArticle::orderBy('updated_at', 'DESC');
 
         //記事を取得(pagination実装)
         $articles = $articles_obj->offset(2 * ($request->input('page') - 1))->limit(2)->get()->toArray();
@@ -109,5 +109,20 @@ class ArticleController extends Controller
         }
 
         return $articles;
+    }
+
+
+
+
+    // 1つの記事を選んだ時のアクション
+    public function showArticle($id)
+    {
+
+        // 任意の記事を取得
+        $article = TArticle::where('article_id', $id)->first();
+
+        //タグ情報を全て取得
+        $m_tags = MTag::all();
+        return view('pages/article', compact('article', 'm_tags'));
     }
 }

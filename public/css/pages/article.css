@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+.article-block-wrap {
+    background-color: black;
+    padding: 20px;
+    width: 80%;
+}
+.article-block-wrap * {
+    color: white;
+}
+
+#title-block {
+}
